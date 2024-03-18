@@ -20,41 +20,41 @@ domain = st.selectbox('Domain', domains, index=0)
 section = st.selectbox('Section' , sections, index=0)
 
 
-if year:
-    if year != 'All':
-        filtered_data = filtered_data[filtered_data['Year'] == year]
+# if year:
+#     if year != 'All':
+#         filtered_data = filtered_data[filtered_data['Year'] == year]
 
-if department:
-    if department != 'All':
-        filtered_data = filtered_data[filtered_data['Department'] == department]
+# if department:
+#     if department != 'All':
+#         filtered_data = filtered_data[filtered_data['Department'] == department]
     
-if section:
-    if section != 'All':
-        filtered_data = filtered_data[filtered_data['Section'] == section]
+# if section:
+#     if section != 'All':
+#         filtered_data = filtered_data[filtered_data['Section'] == section]
                 
-if domain:
-    if domain != 'All':
-        filtered_data = filtered_data[filtered_data['Domain'] == domain]
+# if domain:
+#     if domain != 'All':
+#         filtered_data = filtered_data[filtered_data['Domain'] == domain]
 
 
-if st.button('Fetch'):
-    df = filtered_data
+# if st.button('Fetch'):
+#     df = filtered_data
   
-    data = []
-    error_fetching = []
+#     data = []
+#     error_fetching = []
 
-    for ind, row in df.iterrows():
-        name = str(row['Name']).strip()
-        regno = str(row['Reg Number']).strip()
-        year = str(row['Year']).strip()
-        dept = str(row['Department']).strip()
-        section = str(row['Section']).strip()
-        domain = str(row['Domain']).strip()
-        mail = str(row['Mail ID']).strip()
-        phone = str(row['Mobile Number']).strip()
-        user = str(row['Username']).strip()
+#     for ind, row in df.iterrows():
+#         name = str(row['Name']).strip()
+#         regno = str(row['Reg Number']).strip()
+#         year = str(row['Year']).strip()
+#         dept = str(row['Department']).strip()
+#         section = str(row['Section']).strip()
+#         domain = str(row['Domain']).strip()
+#         mail = str(row['Mail ID']).strip()
+#         phone = str(row['Mobile Number']).strip()
+#         user = str(row['Username']).strip()
         
-        problemsDict, flag = returnQuery(user, name, regno, year, dept, section, domain, mail, phone)
+#         problemsDict, flag = returnQuery(user, name, regno, year, dept, section, domain, mail, phone)
         
         if flag:
             data.append(problemsDict)
