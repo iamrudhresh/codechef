@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-from Endpoints import returnQuery
+
 
 st.write('# **Leetcode Data Fetch**')
 
