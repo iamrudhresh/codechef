@@ -53,11 +53,11 @@ section = st.selectbox('Section' , sections, index=0)
         
 #         problemsDict, flag = returnQuery(user, name, regno, year, dept, section, domain, mail, phone)
         
-        if flag:
-            data.append(problemsDict)
-        else:
-            error_fetching.append(problemsDict)
-            print(f'{user} not found')
+            # if flag:
+            #     data.append(problemsDict)
+            # else:
+            #     error_fetching.append(problemsDict)
+            #     print(f'{user} not found')
 
     dataframe = pd.DataFrame()
 
