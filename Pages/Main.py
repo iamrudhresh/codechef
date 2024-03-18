@@ -5,9 +5,6 @@ import pandas as pd
 st.write('# **Leetcode Data Fetch**')
 
 file = st.file_uploader('Drop the Data here')
-
-
-filtered_data = file.copy()
     
 departments = ["All"] + list(file['Department'].unique())
 sections = ["All"] + list(file['Section'].unique())
