@@ -4,7 +4,7 @@ import pandas as pd
 
 st.write('# **Leetcode Data Fetch**')
 
-file = pd.read_csv('.\data\All Year.csv')
+file = st.file_uploader('Drop the Data here')
 
 
 filtered_data = file.copy()
